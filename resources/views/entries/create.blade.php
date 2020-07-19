@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     {{--  --}}
-                    <form action="" method="POST">
+                    <form action="{{route('storageentry')}}" method="POST">
                         @csrf
                         {{-- Agregando el title --}}
                         <div class="form-group row">

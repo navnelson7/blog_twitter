@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'GuestController@index');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//routeas Entry Controller
 Route::get('/entries/create', 'EntryController@create')->name('createentry');
+Route::post('/entries', 'EntryController@store')->name('storageentry');
