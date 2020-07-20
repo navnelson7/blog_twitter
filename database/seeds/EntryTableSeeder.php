@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Entry;
 class EntryTableSeeder extends Seeder
 {
     /**
@@ -11,6 +11,7 @@ class EntryTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        //haciendo que el factory cree las entradas
+        factory(Entry::class, 100)->create();
     }
 }
