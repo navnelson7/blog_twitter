@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Entry;
+use App\User;
 class EntryTableSeeder extends Seeder
 {
     /**
@@ -12,6 +13,11 @@ class EntryTableSeeder extends Seeder
     public function run()
     {
         //haciendo que el factory cree las entradas
-        factory(Entry::class, 100)->create();
+        $user = User::all(); 
+        $user->each(function ($user){
+            factory(Entry::class, 10)->create([
+                'user_id' => $user->id
+            ]);
+        });
     }
 }

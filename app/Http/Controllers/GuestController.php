@@ -9,7 +9,7 @@ class GuestController extends Controller
     //definiendo metodo index
     public function index()
     {
-        $entries = Entry::all();
+        $entries = Entry::paginate(10);
         return view('welcome',compact('entries'));
     }
 }

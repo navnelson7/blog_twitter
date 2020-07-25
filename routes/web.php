@@ -19,6 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//routeas Entry Controller
+//routes Entry Controller
 Route::get('/entries/create', 'EntryController@create')->name('createentry');
 Route::post('/entries', 'EntryController@store')->name('storageentry');
