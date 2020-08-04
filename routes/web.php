@@ -22,3 +22,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 //routes Entry Controller
 Route::get('/entries/create', 'EntryController@create')->name('createentry');
 Route::post('/entries', 'EntryController@store')->name('storageentry');
+//Route::get('user/{$id}', 'EntryController@show');
+Route::get('/entries/{entry}', 'GuestController@show');
+Route::get('/entries/{entry}/edit', 'EntryController@edit');
+Route::put('/entries/{entry}', 'EntryController@update');
+

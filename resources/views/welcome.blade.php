@@ -14,7 +14,7 @@
                         <p>{{ $entry->content}}</p>
                     </div>
                     <div class="card-footer">
-                        Author: {{$entry->user->name}}
+                    <a href="{{ url('user/'.$entry->id)}}">Author: {{$entry->user->name}}</a>
                     </div>
                 </div>
             @endforeach
