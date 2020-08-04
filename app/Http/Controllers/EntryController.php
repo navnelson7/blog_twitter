@@ -41,7 +41,7 @@ class EntryController extends Controller
     public function update(Request $request,Entry $entry)
     {
         $validateData = $request->validate([
-            'title' => 'required|min:7|max:255|unique:entries',
+            'title' => 'required|min:7|max:255|unique:entries,id,'.$entry->id,
             'content' => 'required|min:25|max:3000'
         ]);
         //verificar que el id del usuario autenticado sea igual que el de la entrada
